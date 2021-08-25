@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="508mm"
+   height="285.75mm"
+   viewBox="0 0 508 285.75"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="home.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.6"
+     inkscape:cx="941.66667"
+     inkscape:cy="717.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Base"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-19.73077,-73.384613)"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect926"
+       width="508"
+       height="285.75"
+       x="19.73077"
+       y="73.384613"
+       ry="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Page">
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';stroke-width:0.264583"
+       x="202.31528"
+       y="271.4675"
+       id="text18694"><tspan
+         sodipodi:role="line"
+         id="tspan18692"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="202.31528"
+         y="271.4675">Made by Freddy with Jekyll</tspan></text>
+    <rect
+       style="fill:#000000;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect3968"
+       width="441.85416"
+       height="1.0583334"
+       x="33.072922"
+       y="34.395832" />
+    <g
+       id="g14233"
+       transform="translate(83.314277)">
+      <g
+         id="g10168"
+         transform="matrix(0.89204221,0,0,0.89204221,-35.256626,3.5604085)"
+         style="stroke-width:1.12102">
+        <path
+           id="rect4313"
+           style="fill:#000000;stroke:none;stroke-width:2.37284;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+           d="m 73.754165,20.12574 c -2.532116,0 -4.570265,2.038149 -4.570265,4.570265 v 2.154391 3.146578 4.570264 h 4.570265 47.279805 4.57078 v -4.570264 -3.146578 -2.154391 c 0,-2.532116 -2.03866,-4.570265 -4.57078,-4.570265 z" />
+        <text
+           xml:space="preserve"
+           style="font-size:9.525px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';stroke-width:0.296604"
+           x="84.974152"
+           y="30.706747"
+           id="text6209"><tspan
+             sodipodi:role="line"
+             id="tspan6207"
+             style="font-size:9.525px;fill:#ffffff;stroke-width:0.296604"
+             x="84.974152"
+             y="30.706747">Home</tspan></text>
+      </g>
+      <g
+         id="g14182"
+         transform="matrix(0.89204221,0,0,0.89204221,-35.432996,3.7132993)"
+         style="stroke-width:1.12102">
+        <path
+           id="path10181"
+           style="fill:#000000;stroke:none;stroke-width:2.37284;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+           d="m 162.9331,19.954346 c -2.53212,0 -4.57027,2.038149 -4.57027,4.570265 v 2.154391 3.146578 4.570264 h 4.57027 47.2798 4.57078 V 29.82558 26.679002 24.524611 c 0,-2.532116 -2.03866,-4.570265 -4.57078,-4.570265 z" />
+        <text
+           xml:space="preserve"
+           style="font-size:9.525px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';stroke-width:0.296604"
+           x="169.01851"
+           y="30.535353"
+           id="text10185"><tspan
+             sodipodi:role="line"
+             id="tspan10183"
+             style="font-size:9.525px;fill:#ffffff;stroke-width:0.296604"
+             x="169.01851"
+             y="30.535353">Projects</tspan></text>
+      </g>
+      <g
+         id="g14187"
+         transform="matrix(0.89204221,0,0,0.89204221,-38.947191,3.7132993)"
+         style="stroke-width:1.12102">
+        <path
+           id="path11851"
+           style="fill:#000000;stroke:none;stroke-width:2.37284;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+           d="m 255.8538,19.954346 c -2.53212,0 -4.57026,2.038149 -4.57026,4.570265 v 2.154391 3.146578 4.570264 h 4.57026 47.27981 4.57078 V 29.82558 26.679002 24.524611 c 0,-2.532116 -2.03866,-4.570265 -4.57078,-4.570265 z" />
+        <text
+           xml:space="preserve"
+           style="font-size:9.525px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';stroke-width:0.296604"
+           x="270.5759"
+           y="30.535353"
+           id="text11855"><tspan
+             sodipodi:role="line"
+             id="tspan11853"
+             style="font-size:9.525px;fill:#ffffff;stroke-width:0.296604"
+             x="270.5759"
+             y="30.535353">Misc</tspan></text>
+      </g>
+      <g
+         id="g14192"
+         transform="matrix(0.89204221,0,0,0.89204221,-46.077351,3.7132993)"
+         style="stroke-width:1.12102">
+        <path
+           id="path12373"
+           style="fill:#000000;stroke:none;stroke-width:2.37284;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+           d="m 352.82809,19.954346 c -2.53212,0 -4.57026,2.038149 -4.57026,4.570265 v 2.154391 3.146578 4.570264 h 4.57026 47.27981 4.57078 V 29.82558 26.679002 24.524611 c 0,-2.532116 -2.03866,-4.570265 -4.57078,-4.570265 z" />
+        <text
+           xml:space="preserve"
+           style="font-size:9.525px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';stroke-width:0.296604"
+           x="359.75067"
+           y="30.535353"
+           id="text12377"><tspan
+             sodipodi:role="line"
+             id="tspan12375"
+             style="font-size:9.525px;fill:#ffffff;stroke-width:0.296604"
+             x="359.75067"
+             y="30.535353">Contact</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:21.7661px;line-height:1.25;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';stroke-width:0.264584"
+       x="45.225945"
+       y="34.183224"
+       id="text15471"><tspan
+         sodipodi:role="line"
+         id="tspan15469"
+         style="stroke-width:0.264584"
+         x="45.225945"
+         y="34.183224">FJ</tspan></text>
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path16987"
+       cx="434.93622"
+       cy="26.289318"
+       r="8.1064463" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="circle17091"
+       cx="457.27597"
+       cy="26.289318"
+       r="8.1064463" />
+    <rect
+       style="fill:#000000;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect17121"
+       width="441.85416"
+       height="1.0583334"
+       x="33.072922"
+       y="257.03134" />
+  </g>
+</svg>
