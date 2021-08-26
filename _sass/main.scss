@@ -1,0 +1,33 @@
+@import "open-color";
+
+$brand-white: $oc-gray-0;
+$brand-black: $oc-gray-9;
+
+* {
+  color: $brand-black;
+}
+
+#site-header {
+  background-color: $brand-black;
+
+  a {
+    color: $brand-white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  #site-brand {
+    text-decoration: none;
+    font-size: 28px;
+  }
+}
+
+#site-footer {
+  background-color: $brand-black;
+
+  p, a {
+    color: $brand-white;
+  }
+}
