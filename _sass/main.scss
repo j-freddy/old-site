@@ -3,7 +3,7 @@
 $brand-white: $oc-gray-0;
 $brand-dark: $oc-gray-8;
 $brand-black: $oc-gray-9;
-$wavy-shape-height: 48px;
+$wavy-shape-height: 52px;
 $arrow-shape-height: 96px;
 
 @mixin no-margin-padding {
@@ -37,50 +37,36 @@ $arrow-shape-height: 96px;
   }
 }
 
+// To style general elements -------------------------------------------------------------------------------------------
+
 * {
   color: $brand-black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-#site-header {
-  $background-colour: $brand-black;
+p, a {
+  font-size: 18px;
+}
 
-  nav {
-    background-color: $background-colour;
-
-    a {
-      color: $brand-white;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    #site-brand {
-      text-decoration: none;
-      font-size: 28px;
-    }
-  }
-
-  .shape-container {
-    position: relative;
-
-    .wavy-divider {
-      @include divider(150%, $wavy-shape-height, $background-colour);
-    }
+@media (min-width: 576px) {
+  .container {
+    max-width: Min(80vw, 1080px);
   }
 }
 
-.escape-header {
-  height: $wavy-shape-height;
-}
-
-#site-footer {
+.site-button {
   background-color: $brand-black;
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 0.5em;
 
-  p, a {
-    color: $brand-white;
+  &:hover {
+    background-color: $brand-dark;
   }
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+@import "header-footer";
 
 .my-jumbotron {
   @include no-margin-padding;

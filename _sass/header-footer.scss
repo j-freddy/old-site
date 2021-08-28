@@ -1,0 +1,40 @@
+#site-header {
+  $background-colour: $brand-black;
+
+  nav {
+    background-color: $background-colour;
+
+    a {
+      color: $brand-white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    #site-brand {
+      text-decoration: none;
+      font-size: 28px;
+    }
+  }
+
+  .shape-container {
+    position: relative;
+
+    .wavy-divider {
+      @include divider(150%, $wavy-shape-height, $background-colour);
+    }
+  }
+}
+
+.escape-header {
+  height: $wavy-shape-height;
+}
+
+#site-footer {
+  background-color: $brand-black;
+
+  p, a {
+    color: $brand-white;
+  }
+}
