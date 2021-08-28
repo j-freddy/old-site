@@ -1,16 +1,44 @@
 ---
-layout: default
+layout: home
 title: Home
 portrait_path: assets/images/me.png
 ---
 
-<p>
-    I am a 2nd year <span class="bg-warning">JMC</span> student at Imperial College London. I have experience in a wide
-    range of programming languages and frameworks, as well as professional experience in both frontend and backend
-    development. I have a strong interest in the field of machine learning, but I am always looking to try something new
-    - in fact, this site was an attempt at familiarising myself with Jekyll.
-</p>
-<img src="{{ page.portrait_path }}" width="240"/>
-<p> You can find a portfolio of my projects here. I'm also hosting 2 JavaScript games I made a few years ago, which you
-    can try out. </p>
-<a class="btn btn-dark" href="projects.html">View Projects</a>
+<div class="container-fluid my-jumbotron">
+    <div class="text-center">
+        <img class="portrait m-5" src="{{ page.portrait_path }}" alt="my-portrait"/>
+
+        <h1 class="title my-3">Freddy Jiang</h1>
+        <h2 class="subtitle">Programmer, Software Engineer</h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="arrow-container">
+        <div class="arrow-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                 preserveAspectRatio="none">
+                <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="text-center mb-5">
+        <p>
+            I am a 2nd year <span class="bg-warning">JMC</span> student at Imperial College London. I have experience in
+            a
+            wide
+            range of programming languages and frameworks, as well as professional experience in both frontend and
+            backend
+            development. I have a strong interest in the field of machine learning, but I am always looking to try
+            something
+            new
+            - in fact, this site was an attempt at familiarising myself with Jekyll.
+        </p>
+        <p> You can find a portfolio of my projects here. I'm also hosting 2 JavaScript games I made a few years ago,
+            which
+            you
+            can try out. </p>
+        <a class="btn btn-dark" href="projects.html">View Projects</a>
+    </div>
+</div>
