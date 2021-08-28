@@ -8,19 +8,51 @@ $brand-black: $oc-gray-9;
 }
 
 #site-header {
-  background-color: $brand-black;
+  $background-colour: $brand-black;
 
-  a {
-    color: $brand-white;
+  nav {
+    background-color: $background-colour;
 
-    &:hover {
-      text-decoration: underline;
+    a {
+      color: $brand-white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    #site-brand {
+      text-decoration: none;
+      font-size: 28px;
     }
   }
 
-  #site-brand {
-    text-decoration: none;
-    font-size: 28px;
+  .shape-container {
+    $shape-height: 48px;
+
+    position: relative;
+    height: $shape-height;
+
+    .custom-shape-divider-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .custom-shape-divider-top svg {
+      position: relative;
+      display: block;
+      width: calc(150% + 1.3px);
+      min-width: 1000px;
+      height: $shape-height;
+    }
+
+    .custom-shape-divider-top .shape-fill {
+      fill: $background-colour;
+    }
   }
 }
 
