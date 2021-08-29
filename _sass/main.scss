@@ -64,6 +64,13 @@ p, a {
   }
 }
 
+.canvas-project {
+  canvas {
+    border: 2px solid $brand-black;
+    border-radius: 16px;
+  }
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 
 @import "header-footer";
