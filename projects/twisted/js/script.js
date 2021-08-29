@@ -64,8 +64,11 @@ for(let i = 0; i < 255; i++) {
   keyList.push(false);
 }
 
-document.onkeydown = (e) => {
+canvas.tabIndex = 1;
+
+canvas.onkeydown = (e) => {
   keyList[event.keyCode] = true;
+  e.preventDefault();
 }
 
 document.onkeyup = (e) => {
