@@ -4,14 +4,20 @@ class RainParticle {
   y;
   width;
   height;
+  frameContainer;
 
-  constructor(x, y, width, height, container) {
+  constructor(x, y, width, height, container, frameContainer) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
     this.element = this.createElement(container);
     this.updateElement();
+    this.frameContainer = frameContainer;
+  }
+
+  get maxY() {
+    return this.frameContainer.offsetHeight;
   }
 
   createElement(container) {
@@ -29,20 +35,13 @@ class RainParticle {
   }
 
   update() {
-    this.y++;
+    if (this.y > this.maxY) {
+      return;
+    }
+
+    this.y += 3;
   }
 
-}
-
-window.onload = () => {
-  console.log("Hello world!");
-
-  const container = document.getElementById("rain-container");
-
-  const particles = [];
-  particles.push(new RainParticle(0, 50, 50, 50, container));
-
-  tick(particles);
 }
 
 function tick(particles) {
@@ -52,4 +51,16 @@ function tick(particles) {
   });
 
   window.requestAnimationFrame(() => tick(particles));
+}
+
+window.onload = () => {
+  console.log("Hello world!");
+
+  const container = document.getElementById("rain-container");
+  const frameContainer = document.getElementById("my-jumbotron");
+
+  const particles = [];
+  particles.push(new RainParticle(0, 50, 50, 50, container, frameContainer));
+
+  tick(particles);
 }
