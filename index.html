@@ -2,14 +2,18 @@
 layout: home
 title: Home
 portrait_path: assets/images/me.png
+scripts: |
+  <script src="assets/js/rain.js"></script>
 ---
 
-<div class="container-fluid my-jumbotron">
+<div class="container-fluid my-jumbotron position-relative">
     <div class="text-center">
         <img class="portrait m-5" src="{{ page.portrait_path }}" alt="my-portrait"/>
 
         <h1 class="title mt-3 mb-4">Freddy Jiang</h1>
         <h3 class="subtitle">Programmer, Software Engineer</h3>
+
+        <div id="rain-container"></div>
     </div>
 </div>
 

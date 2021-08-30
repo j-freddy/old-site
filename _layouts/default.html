@@ -16,5 +16,9 @@
 </div>
 
 {% include scripts.html %}
+
+{% if page.scripts %}
+  {{ page.scripts }}
+{% endif %}
 </body>
 </html>

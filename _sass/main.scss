@@ -64,16 +64,18 @@ p, a {
   }
 }
 
-.canvas-project {
-  canvas {
-    border: 2px solid $brand-black;
-    border-radius: 16px;
-  }
+canvas {
+  border: 2px solid $brand-black;
+  border-radius: 16px;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
 
 @import "header-footer";
+
+#site-header {
+  z-index: 100;
+}
 
 .my-jumbotron {
   @include no-margin-padding;
@@ -100,4 +102,13 @@ p, a {
   .arrow-divider {
     @include divider(100%, $arrow-shape-height, $brand-dark);
   }
+}
+
+.rain-particle {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 16px;
+  height: 100px;
+  background-color: blue;
 }
