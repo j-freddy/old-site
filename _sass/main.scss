@@ -82,6 +82,12 @@ canvas {
   @include flex-centre;
   height: 85vh;
   background-color: $brand-dark;
+  overflow: hidden;
+
+  .jumbotron-content {
+    position: relative;
+    z-index: 100;
+  }
 
   .title, .subtitle {
     color: $brand-white;
@@ -106,5 +112,7 @@ canvas {
 
 .rain-particle {
   position: absolute;
-  background-color: blue;
+  background-color: $brand-black;
+  border-radius: 999px;
+  z-index: 0;
 }

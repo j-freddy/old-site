@@ -1,3 +1,5 @@
+// No clue why I named this RainParticle
+// Should just name it Raindrop...
 class RainParticle {
   element;
   x;
@@ -5,11 +7,12 @@ class RainParticle {
   width;
   height;
   frameContainer;
+  active = true;
 
-  constructor(x, y, width, height, container, frameContainer) {
+  constructor(x, y, height, container, frameContainer) {
     this.x = x;
     this.y = y;
-    this.width = width;
+    this.width = height/12;
     this.height = height;
     this.element = this.createElement(container);
     this.updateElement();
@@ -20,11 +23,29 @@ class RainParticle {
     return this.frameContainer.offsetHeight;
   }
 
+  get speed() {
+    return this.width * 0.8;
+  }
+
   createElement(container) {
     let elem = document.createElement("div");
     elem.classList.add("rain-particle");
     container.appendChild(elem);
     return elem;
+  }
+
+  deleteElement() {
+    this.element.remove();
+  }
+
+  update() {
+    if (this.y > this.maxY) {
+      this.deleteElement();
+      this.active = false;
+      return;
+    }
+
+    this.y += this.speed;
   }
 
   updateElement() {
@@ -34,23 +55,54 @@ class RainParticle {
     this.element.style.left = `${this.x}px`;
   }
 
-  update() {
-    if (this.y > this.maxY) {
-      return;
-    }
-
-    this.y += 3;
-  }
-
 }
 
-function tick(particles) {
-  particles.forEach(p => {
-    p.update();
-    p.updateElement();
-  });
+class Rain {
+  particles;
+  container;
+  frameContainer;
 
-  window.requestAnimationFrame(() => tick(particles));
+  constructor(container, frameContainer) {
+    this.container = container;
+    this.frameContainer = frameContainer;
+    this.particles = [];
+    this.startParticleCreator();
+
+    this.particles.push(this.createParticle());
+  }
+
+  createParticle() {
+    let maxX = this.frameContainer.offsetWidth;
+    let x = randomValue(0, maxX);
+    let height = randomValue(20, 60);
+
+    return new RainParticle(x, 0, height, this.container, this.frameContainer);
+  }
+
+  startParticleCreator() {
+    setInterval(() => this.particles.push(this.createParticle()), 1000/12);
+  }
+
+  update() {
+    this.particles = this.particles.filter(p => p.active);
+
+    this.particles.forEach(p => p.update());
+  }
+
+  updateElements() {
+    this.particles.forEach(p => p.updateElement());
+  }
+}
+
+function randomValue(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+function tick(rain) {
+  rain.update();
+  rain.updateElements();
+
+  window.requestAnimationFrame(() => tick(rain));
 }
 
 window.onload = () => {
@@ -59,8 +111,6 @@ window.onload = () => {
   const container = document.getElementById("rain-container");
   const frameContainer = document.getElementById("my-jumbotron");
 
-  const particles = [];
-  particles.push(new RainParticle(0, 50, 50, 50, container, frameContainer));
-
-  tick(particles);
+  const rain = new Rain(container, frameContainer);
+  tick(rain);
 }
