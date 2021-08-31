@@ -100,7 +100,7 @@ function randomValue(min, max) {
 
 function tick(rain) {
   rain.update();
-  rain.updateElements();
+    rain.updateElements();
 
   window.requestAnimationFrame(() => tick(rain));
 }

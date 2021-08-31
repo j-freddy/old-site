@@ -45,7 +45,7 @@ $arrow-shape-height: 96px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-p, a {
+p, a, li {
   font-size: 18px;
 }
 
@@ -130,4 +130,11 @@ canvas {
   .card-text {
     font-size: 16px;
   }
+}
+
+.contact-section {
+  border-left: 4px solid $brand-light;
+  border-radius: 4px;
+  padding-left: 1.5em;
+  margin-bottom: 2em;
 }
