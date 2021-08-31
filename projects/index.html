@@ -6,24 +6,40 @@ projects:
     description: "This web app is produced from scratch using Flask and SQLAlchemy. I was one of the main
     developers during my placement with DoC EdTech. It currently serves as the peer assessment platform for the
     department of computing at Imperial College."
+    img: "../assets/images/pa-preview.png"
   - title: TA Tracker
     description: "Another web app that I co-developed during my internship with DoC EdTech. TA Tracker manages all
     activity related to teaching assistants at DoC Imperial College, except payment."
+    img: "../assets/images/ta-preview.png"
   - title: Java Pawn Race
     description: "Despite being one of the winners of the Kotlin AI Pawn Race in my 1st year at Imperial, I challenged
     myself to create a stronger AI. I prototyped a chess program I built to support Pawn Race, and programmed a minimax
     algorithm with alpha-beta pruning, using the strategy of 'space control' as a static evaluator. It triumphed over my
     Kotlin MCTS AI."
+    img: "../assets/images/pawn-race-preview.png"
   - title: Duel!
     description: "Inspired by Eggnogg, a 2P shooter game I enjoyed many years ago, I created my own version in Unity3D.
     This project was created in 1 week for Brackeys Jam 2020.2"
+    img: "../assets/images/duel-preview.png"
   - title: Parallax
     description: "I used to love coding games on Scratch, and this is my most popular project!"
+    img: "../assets/images/parallax-preview.png"
   - title: 8 Ball Pool
     description: "Do I want to include this lol"
+    img: "../assets/images/pool-preview.png"
 ---
 
-{% for project in page.projects %}
-<h2>{{ project.title }}</h2>
-<p>{{ project.description }}</p>
-{% endfor %}
+<div class="row">
+    {% for project in page.projects %}
+    <div class="col-lg-6">
+        <div class="card">
+            <img src="{{ project.img }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
