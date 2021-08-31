@@ -1,6 +1,7 @@
 @import "open-color";
 
 $brand-white: $oc-gray-0;
+$brand-light: $oc-gray-5;
 $brand-dark: $oc-gray-8;
 $brand-black: $oc-gray-9;
 $wavy-shape-height: 52px;
@@ -115,4 +116,19 @@ canvas {
   background-color: $brand-black;
   border-radius: 999px;
   z-index: 0;
+}
+
+.card {
+  border: 2px solid $brand-black;
+  border-radius: 1em;
+  overflow: hidden;
+  height: auto !important;
+
+  .card-img-top {
+    border-bottom: 2px dashed $brand-light;
+  }
+
+  .card-text {
+    font-size: 16px;
+  }
 }
