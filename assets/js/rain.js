@@ -30,6 +30,8 @@ class RainParticle {
   createElement(container) {
     let elem = document.createElement("div");
     elem.classList.add("rain-particle");
+    elem.style.width = `${this.width}px`;
+    elem.style.height = `${this.height}px`;
     container.appendChild(elem);
     return elem;
   }
@@ -49,8 +51,6 @@ class RainParticle {
   }
 
   updateElement() {
-    this.element.style.width = `${this.width}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.top = `${this.y}px`;
     this.element.style.left = `${this.x}px`;
   }
@@ -67,8 +67,6 @@ class Rain {
     this.frameContainer = frameContainer;
     this.particles = [];
     this.startParticleCreator();
-
-    this.particles.push(this.createParticle());
   }
 
   createParticle() {
@@ -100,7 +98,7 @@ function randomValue(min, max) {
 
 function tick(rain) {
   rain.update();
-    rain.updateElements();
+  rain.updateElements();
 
   window.requestAnimationFrame(() => tick(rain));
 }

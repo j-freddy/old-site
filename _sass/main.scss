@@ -111,11 +111,11 @@ canvas {
   }
 }
 
-.rain-particle {
-  position: absolute;
-  background-color: $brand-black;
-  border-radius: 999px;
-  z-index: 0;
+#page-content {
+  .content-main {
+    position: relative;
+    z-index: 100;
+  }
 }
 
 .card {
@@ -137,4 +137,19 @@ canvas {
   border-radius: 4px;
   padding-left: 1.5em;
   margin-bottom: 2em;
+}
+
+.rain-particle {
+  position: absolute;
+  background-color: $brand-black;
+  border-radius: 999px;
+}
+
+
+
+.interactive-square {
+  position: absolute;
+  border: 2px solid $brand-black;
+  // Temporary
+  background-color: red;
 }
