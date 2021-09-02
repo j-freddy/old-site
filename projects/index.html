@@ -8,26 +8,32 @@ projects:
     description: "This web app is produced from scratch using Flask and SQLAlchemy. I was one of the main
     developers during my placement with DoC EdTech. It currently serves as the peer assessment platform for the
     department of computing at Imperial College."
+    link: "https://peer-assessment.doc.ic.ac.uk/"
     img: "../assets/images/pa-preview.png"
   - title: TA Tracker
     description: "Another web app that I co-developed during my internship with DoC EdTech. TA Tracker manages all
     activity related to teaching assistants at DoC Imperial College, except payment."
+    link: "https://gitlab.doc.ic.ac.uk/edtech/teaching-assistants"
     img: "../assets/images/ta-preview.png"
   - title: Java Pawn Race
     description: "Despite being one of the winners of the Kotlin AI Pawn Race in my 1st year at Imperial, I challenged
     myself to create a stronger AI. I prototyped a chess program I built to support Pawn Race, and programmed a minimax
     algorithm with alpha-beta pruning, using the strategy of 'space control' as a static evaluator. It triumphed over my
     Kotlin MCTS AI."
+    link: "https://github.com/j-freddy/pawn-race"
     img: "../assets/images/pawn-race-preview.png"
   - title: Duel!
     description: "Inspired by Eggnogg, a 2P shooter game I enjoyed many years ago, I created my own version in Unity3D.
     This project was created in 1 week for Brackeys Jam 2020.2"
+    link: "https://litetj.itch.io/duel"
     img: "../assets/images/duel-preview.png"
   - title: Parallax
     description: "I used to love coding games on Scratch, and this is my most popular project!"
+    link: "https://scratch.mit.edu/projects/177260519/"
     img: "../assets/images/parallax-preview.png"
   - title: 8 Ball Pool
-    description: "Do I want to include this lol"
+    description: "My attempt at creating Pool in JavaScript. It's still a WIP but the physics engine is fully complete."
+    link: "https://github.com/j-freddy/8-ball-pool"
     img: "../assets/images/pool-preview.png"
 ---
 
@@ -35,7 +41,9 @@ projects:
     {% for project in page.projects %}
     <div class="col-lg-6 d-flex align-items-stretch">
         <div class="card mb-4">
-            <img src="{{ project.img }}" class="card-img-top" alt="...">
+            <a href="{{ project.link }}" target="_blank">
+                <img src="{{ project.img }}" class="card-img-top" alt="{{ project.title }} preview">
+            </a>
             <div class="card-body text-center">
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>
