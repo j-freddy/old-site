@@ -77,7 +77,7 @@ class SquareController {
     for (let i = 0; i < numSquares; i++) {
       let x = randomValue(0, maxX);
       let y = randomValue(0, maxY);
-      let width = randomValue(30, 50);
+      let width = randomValue(25, 60);
       let rotation = randomValue(0, 360);
       let rotateVel = Math.round(Math.random()) ? 10 : -10;
       let colour = this.colours[Math.floor(randomValue(0, this.colours.length))];
