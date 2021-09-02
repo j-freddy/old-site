@@ -116,27 +116,27 @@ canvas {
     position: relative;
     z-index: 100;
   }
-}
 
-.card {
-  border: 2px solid $brand-black;
-  border-radius: 1em;
-  overflow: hidden;
+  .card {
+    border: 2px solid $brand-black;
+    border-radius: 1em;
+    overflow: hidden;
 
-  .card-img-top {
-    border-bottom: 2px dashed $brand-light;
+    .card-img-top {
+      border-bottom: 2px dashed $brand-light;
+    }
+
+    .card-text {
+      font-size: 16px;
+    }
   }
 
-  .card-text {
-    font-size: 16px;
+  .contact-section {
+    border-left: 4px solid $brand-light;
+    border-radius: 4px;
+    padding-left: 1.5em;
+    margin-bottom: 2em;
   }
-}
-
-.contact-section {
-  border-left: 4px solid $brand-light;
-  border-radius: 4px;
-  padding-left: 1.5em;
-  margin-bottom: 2em;
 }
 
 .rain-particle {
