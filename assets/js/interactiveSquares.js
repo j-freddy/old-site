@@ -99,14 +99,16 @@ window.onload = () => {
   const container = document.getElementById("squares-container");
   const frameContainer = document.getElementById("page-content");
 
+  // Do not generate for viewports of less than 768px (medium)
+  // Since there is not enough edge space
+  if (frameContainer.clientWidth < 768) {
+    return;
+  }
+
   const densityFactor = 0.0001;
   let maxX = frameContainer.clientWidth * 0.12;
   let maxY = frameContainer.clientHeight * 0.5;
   let numSquares = 4 + Math.floor(maxX * maxY * densityFactor);
-
-  console.log(maxX);
-  console.log(maxY);
-  console.log(numSquares);
 
   const squareController = new SquareController(container, numSquares, maxX, maxY);
   tick(squareController);
