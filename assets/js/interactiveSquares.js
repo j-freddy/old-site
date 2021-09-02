@@ -7,14 +7,14 @@ class Square {
   rotation;
   rotateSpeed;
 
-  constructor(x, y, width, rotation, rotateVelocity, container) {
+  constructor(x, y, width, rotation, rotateVelocity, container, colour) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.rotation = rotation;
     this.maxRotateVelocity = rotateVelocity;
     this.rotateSpeed = 0;
-    this.element = this.createElement(container);
+    this.element = this.createElement(container, colour);
     this.startEventHandlers();
   }
 
@@ -22,13 +22,14 @@ class Square {
     return this.width;
   }
 
-  createElement(container) {
+  createElement(container, colour) {
     let elem = document.createElement("div");
     elem.classList.add("interactive-square");
     elem.style.width = `${this.width}px`;
     elem.style.height = `${this.height}px`;
     elem.style.top = `${this.y}px`;
     elem.style.left = `${this.x}px`;
+    elem.style.backgroundColor = colour;
     container.appendChild(elem);
     return elem;
   }
@@ -56,6 +57,15 @@ class SquareController {
   squares;
   container;
 
+  // Taken from open-color
+  colours = [
+    "#e03131",
+    "#c2255c",
+    "#9c36b5",
+    "#6741d9",
+    "#3b5bdb"
+  ]
+
   constructor(container, numSquares, maxX, maxY) {
     this.container = container;
     this.squares = this.createSquares(numSquares, maxX, maxY);
@@ -70,7 +80,8 @@ class SquareController {
       let width = randomValue(30, 50);
       let rotation = randomValue(0, 360);
       let rotateVel = Math.round(Math.random()) ? 10 : -10;
-      squares.push(new Square(x, y, width, rotation, rotateVel, this.container));
+      let colour = this.colours[Math.floor(randomValue(0, this.colours.length))];
+      squares.push(new Square(x, y, width, rotation, rotateVel, this.container, colour));
     }
 
     return squares;
