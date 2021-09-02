@@ -1,16 +1,18 @@
 class Square {
   element;
+  maxRotateVelocity;
   x;
   y;
   width;
   rotation;
   rotateSpeed;
 
-  constructor(x, y, width, rotation, container) {
+  constructor(x, y, width, rotation, rotateVelocity, container) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.rotation = rotation;
+    this.maxRotateVelocity = rotateVelocity;
     this.rotateSpeed = 0;
     this.element = this.createElement(container);
     this.startEventHandlers();
@@ -32,10 +34,10 @@ class Square {
   }
 
   update() {
-    if (this.rotateSpeed > 0.1) {
+    if (Math.abs(this.rotateSpeed) > 0.1) {
       this.rotation += this.rotateSpeed;
       this.rotation %= 360;
-      this.rotateSpeed *= 0.9;
+      this.rotateSpeed *= 0.93;
     }
   }
 
@@ -45,7 +47,7 @@ class Square {
 
   startEventHandlers() {
     this.element.onmouseover = () => {
-      this.rotateSpeed = 10;
+      this.rotateSpeed = this.maxRotateVelocity;
     }
   }
 }
@@ -67,7 +69,8 @@ class SquareController {
       let y = randomValue(0, maxY);
       let width = randomValue(30, 50);
       let rotation = randomValue(0, 360);
-      squares.push(new Square(x, y, width, rotation, this.container));
+      let rotateVel = Math.round(Math.random()) ? 10 : -10;
+      squares.push(new Square(x, y, width, rotation, rotateVel, this.container));
     }
 
     return squares;
