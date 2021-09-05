@@ -3,6 +3,28 @@ layout: page
 title: Misc
 scripts: |
   <script src="assets/js/interactiveSquares.js"></script>
+lichess: "https://lichess.org/@/AnonymousFox"
+chess: "https://www.chess.com/member/anonymousnarwhal"
+mt_albums:
+  - title: "Masterpiece Theatre (album #2)"
+    link: "https://open.spotify.com/album/6GcTcEg2V7ZUx0wOOklwyO?si=FNfRlZdgRa2t9Arj_tz-Uw&dl_branch=1"
+  - title: "Ever After (album #3)"
+    link: "https://open.spotify.com/album/5fHGpmtWhiS4ezzQW2wp4e?si=e_YYPVl3QGeOqiiFuUomaA&dl_branch=1&nd=1"
+supertux: "https://www.supertux.org/"
 ---
-<p>I will populate this page with some random stuff later. For now, check out my projects :)</p>
-<p>(or play with the squares on the left, if you're using a computer)</p>
+<p>I enjoy chess - come challenge me on
+  <a href="{{ page.lichess }}" target="_blank">LiChess</a>
+  or
+  <a href="{{ page.chess }}" target="_blank">chess.com</a>!
+</p>
+<p><b>Mariana's Trench</b> is an extremely underrated band, I'd definitely recommend checking their albums out! Since
+  their 2nd album, each release tells a story and begins with a Queen-like rhapsody.</p>
+<ul>
+  {% for album in page.mt_albums %}
+    <li>{{ album.title }}
+      <br>
+      <a href="{{ album.link }}" target="_blank">Spotify</a>
+    </li>
+  {% endfor %}
+</ul>
+<p>SuperTux is the best open source platformer game (<a href="{{ page.supertux }}" target="_blank">link</a>)</p>
