@@ -1,0 +1,30 @@
+@mixin no-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin divider($width-percentage, $height, $fill) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+
+  svg {
+    position: relative;
+    display: block;
+    width: $width-percentage;
+    height: $height;
+  }
+
+  .shape-fill {
+    fill: $fill;
+  }
+}

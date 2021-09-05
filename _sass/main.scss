@@ -4,39 +4,10 @@ $brand-white: $oc-gray-0;
 $brand-light: $oc-gray-5;
 $brand-dark: $oc-gray-8;
 $brand-black: $oc-gray-9;
-$wavy-shape-height: 64px;
+$wavy-shape-height: 48px;
 $arrow-shape-height: 96px;
 
-@mixin no-margin-padding {
-  margin: 0;
-  padding: 0;
-}
-
-@mixin flex-centre {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin divider($width-percentage, $height, $fill) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-
-  svg {
-    position: relative;
-    display: block;
-    width: $width-percentage;
-    height: $height;
-  }
-
-  .shape-fill {
-    fill: $fill;
-  }
-}
+@import "mixins";
 
 // To style general elements -------------------------------------------------------------------------------------------
 
@@ -90,14 +61,15 @@ canvas {
     z-index: 100;
   }
 
-  .title, .subtitle {
+  .title {
+    font-size: 2.2em;
     color: $brand-white;
   }
 
   .portrait {
     border-radius: 50%;
     border: 4px solid $brand-white;
-    width: 360px;
+    width: 340px;
     max-width: 75vw;
   }
 }
