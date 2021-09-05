@@ -121,7 +121,7 @@ window.onload = () => {
 
   const densityFactor = 0.0001;
   let maxX = frameContainer.clientWidth * 0.12;
-  let maxY = frameContainer.clientHeight * 0.5;
+  let maxY = frameContainer.clientHeight * 0.8;
   let numSquares = 4 + Math.floor(maxX * maxY * densityFactor);
 
   const squareController = new SquareController(container, numSquares, maxX, maxY);
