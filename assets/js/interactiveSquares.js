@@ -46,19 +46,15 @@ class Square {
 }
 
 class SquareController {
-  squares;
-  container;
-
-  // Taken from open-color
-  colours = [
-    "#e03131",
-    "#c2255c",
-    "#9c36b5",
-    "#6741d9",
-    "#3b5bdb"
-  ]
-
   constructor(container, numSquares, maxX, maxY) {
+    // Taken from open-color
+    this.colours = [
+      "#e03131",
+      "#c2255c",
+      "#9c36b5",
+      "#6741d9",
+      "#3b5bdb"
+    ]
     this.container = container;
     this.squares = this.createSquares(numSquares, maxX, maxY);
   }

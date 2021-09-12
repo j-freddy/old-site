@@ -51,10 +51,6 @@ class RainParticle {
 }
 
 class Rain {
-  particles;
-  container;
-  frameContainer;
-
   constructor(container, frameContainer) {
     this.container = container;
     this.frameContainer = frameContainer;
