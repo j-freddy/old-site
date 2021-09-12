@@ -1,12 +1,4 @@
 class Square {
-  element;
-  maxRotateVelocity;
-  x;
-  y;
-  width;
-  rotation;
-  rotateSpeed;
-
   constructor(x, y, width, rotation, rotateVelocity, container, colour) {
     this.x = x;
     this.y = y;

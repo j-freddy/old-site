@@ -1,14 +1,6 @@
 // No clue why I named this RainParticle
 // Should just name it Raindrop...
 class RainParticle {
-  element;
-  x;
-  y;
-  width;
-  height;
-  frameContainer;
-  active = true;
-
   constructor(x, y, height, container, frameContainer) {
     this.x = x;
     this.y = y;
@@ -17,6 +9,7 @@ class RainParticle {
     this.element = this.createElement(container);
     this.updateElement();
     this.frameContainer = frameContainer;
+    this.active = true;
   }
 
   get maxY() {
