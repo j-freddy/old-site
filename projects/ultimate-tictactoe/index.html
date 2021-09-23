@@ -1,0 +1,41 @@
+---
+layout: page
+title: Ultimate TicTacToe
+rules:
+  - Each small 3×3 board is a local board, and the larger 3×3 board is the global board.
+  - When a player plays a move, it sends their opponent to its relative location on the global board.
+  - If a player wins on a local board, that board gets captured by the player.
+  - If a player is sent to a local board that is full or captured, then that player may choose any other board.
+  - A player wins by winning on the global board.
+update-link: "https://www.doc.ic.ac.uk/~ffj20/projects/ultimate-tictactoe"
+
+scripts: |
+  <script src="js/SAT.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/img.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/subgrid.js"></script>
+  <script src="js/game.js"></script>
+---
+
+<div class="text-center">
+  <canvas id="canvas" width="480px" height="480px">
+    Your browser does not support canvas.
+  </canvas>
+  <p id="message">Status: New game</p>
+
+  <div id="rules" class="mt-5 py-3">
+    <h3 class="my-3 py-3 border-top border-bottom">Rules</h3>
+    <ul>
+      {% for line in page.rules %}
+      <li>{{ line }}</li>
+      {% endfor %}
+    </ul>
+    <p>(adapted from Wikipedia)</p>
+  </div>
+
+  <div class="border-top">
+    <p>Click <a href="{{page.update-link}}" target="_blank">here</a> for updated design</p>
+  </div>
+</div>
