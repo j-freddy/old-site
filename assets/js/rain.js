@@ -93,8 +93,6 @@ function tick(rain) {
 }
 
 window.onload = () => {
-  console.log("Hello world!");
-
   const container = document.getElementById("rain-container");
   const frameContainer = document.getElementById("my-jumbotron");
 

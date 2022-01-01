@@ -4,8 +4,8 @@ $brand-white: $oc-gray-0;
 $brand-light: $oc-gray-5;
 $brand-dark: $oc-gray-8;
 $brand-black: $oc-gray-9;
-$wavy-shape-height: 48px;
-$arrow-shape-height: 96px;
+$wavy-shape-height: 40px;
+$arrow-shape-height: 88px;
 
 @import "mixins";
 
@@ -39,6 +39,11 @@ p, a, li {
 canvas {
   border: 2px solid $brand-black;
   border-radius: 16px;
+}
+
+.text-with-tooltip {
+  text-decoration: underline;
+  font-style: italic;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -87,6 +92,12 @@ canvas {
   .content-main {
     position: relative;
     z-index: 100;
+
+    .page-title {
+      border-bottom: 3px solid black;
+      border-radius: 3px;
+      padding: 0 0.3em 0 0.3em;
+    }
   }
 
   .card {
