@@ -1,23 +1,23 @@
 // No clue why I named this RainParticle
 // Should just name it Raindrop...
 class RainParticle {
-  constructor(x, y, height, container, frameContainer) {
+  constructor(x, y, height, opacity, container, frameContainer) {
     this.x = x;
     this.y = y;
-    this.width = height/12;
+    this.width = height/14;
     this.height = height;
+    this.opacity = opacity;
     this.element = this.createElement(container);
     this.updateElement();
     this.frameContainer = frameContainer;
     this.active = true;
+
+    this.speed = this.width;
+    this.gravity = this.height * 0.05;
   }
 
   get maxY() {
     return this.frameContainer.offsetHeight;
-  }
-
-  get speed() {
-    return this.width * 0.8;
   }
 
   createElement(container) {
@@ -25,6 +25,7 @@ class RainParticle {
     elem.classList.add("rain-particle");
     elem.style.width = `${this.width}px`;
     elem.style.height = `${this.height}px`;
+    elem.style.opacity = this.opacity;
     container.appendChild(elem);
     return elem;
   }
@@ -41,6 +42,7 @@ class RainParticle {
     }
 
     this.y += this.speed;
+    this.speed += this.gravity;
   }
 
   updateElement() {
@@ -52,6 +54,8 @@ class RainParticle {
 
 class Rain {
   constructor(container, frameContainer) {
+    // Rain particles per second
+    this.rainFrequency = 48;
     this.container = container;
     this.frameContainer = frameContainer;
     this.particles = [];
@@ -61,13 +65,15 @@ class Rain {
   createParticle() {
     let maxX = this.frameContainer.offsetWidth;
     let x = randomValue(0, maxX);
-    let height = randomValue(20, 60);
+    let height = randomValue(20, 72);
+    let opacity = randomValue(0.4, 0.8);
 
-    return new RainParticle(x, 0, height, this.container, this.frameContainer);
+    return new RainParticle(x, 0, height, opacity, this.container,
+      this.frameContainer);
   }
 
   startParticleCreator() {
-    setInterval(() => this.particles.push(this.createParticle()), 1000/12);
+    setInterval(() => this.particles.push(this.createParticle()), 1000/this.rainFrequency);
   }
 
   update() {

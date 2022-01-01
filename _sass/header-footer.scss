@@ -22,7 +22,7 @@
     position: relative;
 
     .wavy-divider {
-      @include divider(150%, $wavy-shape-height, $background-colour);
+      @include divider-top(150%, $wavy-shape-height, $background-colour);
     }
   }
 }

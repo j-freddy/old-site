@@ -11,7 +11,6 @@
 
 @mixin divider($width-percentage, $height, $fill) {
   position: absolute;
-  top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -27,4 +26,14 @@
   .shape-fill {
     fill: $fill;
   }
+}
+
+@mixin divider-top($width-percentage, $height, $fill) {
+  @include divider($width-percentage, $height, $fill);
+  top: 0;
+}
+
+@mixin divider-bottom($width-percentage, $height, $fill) {
+  @include divider($width-percentage, $height, $fill);
+  bottom: 0;
 }
