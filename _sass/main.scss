@@ -24,9 +24,6 @@ p, a, li {
 a {
   color: $brand-colour;
 
-  &:visited {
-    color: $brand-colour;
-  }
   &:hover {
     color: $brand-colour-dark;
   }
@@ -42,6 +39,7 @@ a {
   background-color: $brand-black;
   padding: 0.5em 1em 0.5em 1em;
   border-radius: 0.5em;
+  color: $brand-white;
 
   &:hover {
     background-color: $brand-dark;
